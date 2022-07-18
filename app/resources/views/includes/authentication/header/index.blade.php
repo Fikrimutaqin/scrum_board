@@ -2,6 +2,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- Favicon-->
+<link rel="apple-touch-icon" sizes="57x57" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ URL::to('assets/authentication/images/Logo.png') }}">
+
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -17,4 +32,4 @@
 <link rel="stylesheet" href="{{ URL::to('assets/authentication/css/style.css') }}" />
 
 
-<title>Hello, world!</title>
+<title>Sign In</title>

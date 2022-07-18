@@ -11,12 +11,13 @@
                         <img class="img-fluid" src="{{ URL::to('assets/authentication/images/Logo.png') }}" alt="Logo" />
                     </div>
                     <h2 class="color-primary auth-head-font-style">
-                        Login
+                        Sign In
                     </h2>
                     <p class="color-secondary auth-desc-font-style">
-                        Selamat Datang di Aplikasi <br /> Manajemen Proyek
+                        Selamat Datang di Aplikasi Manajemen Proyek
                     </p>
-                    <form method="post" action="#">
+                    <form method="POST" action="/users/signin">
+                        @csrf
                         <div class="mb-3">
                             <label class="form-label auth-label-input color-primary">Email*</label>
                             <input type="email" name="email" value="{{ old('email') }}"
@@ -38,8 +39,11 @@
                             </a>
                         </div>
                     </form>
+                    <p class="color-secondary auth-desc-font-style text-center font-size-16">
+                        Copyright © 2016 - 2022 Fikri Mutaqin
+                    </p>
                 </div>
-                <div class="col-lg-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="col-lg-6 col-lg-6 col-sm-12 col-xs-12 d-none d-sm-none d-lg-block">
                     <div class="d-flex justify-content-center align-items-center h-100">
                         <img class="img-fluid auth-style-background-image"
                             src="{{ URL::to('assets/authentication/images/Background_Right.png') }}" />

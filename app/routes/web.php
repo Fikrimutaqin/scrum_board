@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\RouteGroup;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.authentication.sign-in.index');
 });
+
+Route::prefix('/users')
+    ->group(function () {
+        Route::post('/signin', [UserController::class, 'signin']);
+    });
