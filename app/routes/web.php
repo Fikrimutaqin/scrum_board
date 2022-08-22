@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Routing\RouteGroup;
+
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +22,14 @@ Route::get('/', function () {
     return view('pages.authentication.sign-in.index');
 });
 
-Route::prefix('/users')
+Route::prefix('/auth')
     ->group(function () {
         Route::post('/signin', [UserController::class, 'signin']);
+        Route::get('/signout', [UserController::class, 'signout']);
+    });
+
+Route::prefix('/dashboard')
+    ->middleware(['is.auth', 'whatRole'])
+    ->group(function () {
+        Route::get('', [DashboardController::class, 'index']);
     });

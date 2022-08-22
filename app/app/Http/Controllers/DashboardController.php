@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
-use App\Models\User;
 
-class UserController extends Controller
+use Session;
+
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $data = ['title' => 'Dashboard', 'menu' => $this->dataMenu()];
+        return view('pages.dashboard.home.index', $data);
     }
 
     /**
@@ -85,37 +86,16 @@ class UserController extends Controller
     }
 
     /**
-     * User To do Login with email and password
+     * List data menu
      */
-    public function signin(Request $request)
+
+    public function dataMenu()
     {
-        //form validation
-        $isValid = $this->validate($request, [
-            'email' => 'required',
-            'password' => 'required',
-        ]);
-
-        //find user by email
-        $find = User::where('email', $request->email)->firstOrFail();
-
-        if ($isValid) {
-            if ($find->email == $request->email && $find->password == $request->password) {
-                // Set Session
-                Session::put('isLogin', true);
-                Session::put('dataUsers', $find);
-                return redirect('/dashboard');
-            } else {
-                return redirect('/')->withInput($request->all());
-            }
+        $data = [['title' => 'Home', 'icon' => 'fa-solid fa-house-user', 'url' => '#', 'slug' => 'dashboard'], ['title' => 'Project', 'icon' => 'fa-solid fa-diagram-project', 'url' => '#', 'slug' => 'project'], ['title' => 'Setting', 'icon' => 'fa-solid fa-sliders', 'url' => '#', 'slug' => 'setting'], ['title' => 'Logout', 'icon' => 'fa-solid fa-right-from-bracket', 'url' => '/auth/signout', 'slug' => 'logout']];
+        $arrayPushMenu = [];
+        foreach ($data as $datas) {
+            array_push($arrayPushMenu, $datas);
         }
-    }
-
-    /**
-     * Function for user logout
-     */
-    public function signout()
-    {
-        Session::flush();
-        return redirect('/');
+        return $arrayPushMenu;
     }
 }

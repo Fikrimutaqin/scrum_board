@@ -16,7 +16,7 @@
                     <p class="color-secondary auth-desc-font-style">
                         Selamat Datang di Aplikasi Manajemen Proyek
                     </p>
-                    <form method="POST" action="/users/signin">
+                    <form method="POST" action="/auth/signin">
                         @csrf
                         <div class="mb-3">
                             <label class="form-label auth-label-input color-primary">Email*</label>
