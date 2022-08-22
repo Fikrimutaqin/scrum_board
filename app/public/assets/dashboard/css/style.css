@@ -1,0 +1,178 @@
+.dashboard-sidebar-wrappe{
+    width: 16%;
+    height: 100vh;
+    background:#fafafa;
+    padding: 30px;
+    margin: 0;
+    position: fixed;
+}
+.dashboard-padding-none{
+    padding-left: 0!important;
+}
+.dashboard-label-fullname{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+.dashboard-menus{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.dashboard-menu-headline{
+    color: #7e7e7e;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.list-group-item{
+    background-color:transparent!important;
+    border: none!important;
+}
+ul.dashboard-menu-list > .list-group-item a {
+    color: #bbc0c8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+li.active::before {
+    content: "";
+    width: 100%;
+    height: 60%;
+    border-left: 4px solid #7C5DFF;
+    position: absolute;
+    left: 0px!important;
+    top: 12px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    z-index: -1;
+    font-family: 'Poppins', sans-serif;
+}
+li.active a{
+    color: #7C5DFF!important;
+    font-weight: 600!important;
+    font-family: 'Poppins', sans-serif;
+}
+.dashboard-button-floating a.dashboard-btn-rounded {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background: #6c63ff;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+.dashboard-button-floating {
+    position: fixed;
+    bottom: 20px;
+    left: 45px;
+}
+.dashboard-title-main-content {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.dashboard-title-main-content h2 {
+    font-size: 25px;
+    color: #311b92;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+.dashboard-slider-main-content {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.dashboard-icon-lock-style{
+    color: white;
+    font-size: 35px;
+}
+.dashboard-title-project {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.dashboard-team-project-avatar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.dashboard-icon-image {
+    background: white;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-right: -5px;
+}
+.dashboard-rounded-20{
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.dashboard-tabs-status-task{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #311b92;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+.nav-link {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+.dashboard-mytask-inprogress {
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+p.dashboard-duedate-task{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #7e7e7e;
+    font-weight: 500;
+    font-style: italic;
+}
+.dashboard-mytask-inprogress h4{
+    font-family: 'Poppins', sans-serif;
+    color: #262627;
+}
+.dashboard-mytask-inprogress p{
+    font-family: 'Poppins', sans-serif;
+    color: #7e7e7e;
+    line-height: 1.5;
+}
+.dashboard-task-item-link{
+    color: blue;
+    text-decoration: none;
+}
+.dashboard-margin-right-left-50{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.dashboard-icon-statistic .badge {
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+}
+.dashboard-rounded-card{
+    border-radius: 20px;
+    border: none;
+}
